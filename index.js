@@ -55,9 +55,9 @@ function placeOrder(cardNumber) {
   if (cardNumber == null) {
     return "Sorry, we don't have a credit card on file for you."
   }
-  var totalVal = total()
+  var totalVal = `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
   cart = []
-  return `Your total cost is $${totalVal}, which will be charged to the card ${cardNumber}.`
+  return totalVal
 }
 
 function randomInt(min, max) // min and max included
